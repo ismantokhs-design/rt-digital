@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Perbaiki path manifest menggunakan ./ -->
+    <!-- PWA Manifest & Tema Warna -->
     <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#0f766e" />
     <meta name="description" content="Aplikasi Layanan Warga RT Digital" />
@@ -14,11 +14,11 @@
   </head>
   <body>
     <div id="root"></div>
-    
-    <!-- Perbaiki path main.jsx menggunakan ./ -->
+
+    <!-- Script utama React menggunakan path relatif ./ -->
     <script type="module" src="./src/main.jsx"></script>
 
-    <!-- Perbaiki path Service Worker menggunakan ./ -->
+    <!-- Pendaftaran Service Worker (PWA) -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
