@@ -2,11 +2,11 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- PWA Manifest & Tema Warna -->
-    <link rel="manifest" href="/manifest.json" />
+    <!-- Perbaiki path manifest menggunakan ./ -->
+    <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#0f766e" />
     <meta name="description" content="Aplikasi Layanan Warga RT Digital" />
 
@@ -14,15 +14,17 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Perbaiki path main.jsx menggunakan ./ -->
+    <script type="module" src="./src/main.jsx"></script>
 
-    <!-- Pendaftaran Service Worker (PWA) -->
+    <!-- Perbaiki path Service Worker menggunakan ./ -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((reg) => console.log('Service Worker terdaftar dengan sukses: ', reg.scope))
-            .catch((err) => console.log('Pendaftaran Service Worker gagal: ', err));
+          navigator.serviceWorker.register('./sw.js')
+            .then((reg) => console.log('Service Worker terdaftar: ', reg.scope))
+            .catch((err) => console.log('Service Worker gagal: ', err));
         });
       }
     </script>
